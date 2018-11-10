@@ -9,5 +9,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Infinite Scroll
 
 First of all install Angular CDK package and import  ScrollingModule in the application module.
-$ npm install @angular/cdk@latest
-import { ScrollingModule } from '@angular/cdk/scrolling';
+<pre>$ npm install @angular/cdk@latest</pre>
+<pre>import { ScrollingModule } from '@angular/cdk/scrolling';</pre>
