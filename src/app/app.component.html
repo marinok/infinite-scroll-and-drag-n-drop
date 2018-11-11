@@ -1,11 +1,11 @@
 <h2>Infinite scroll</h2>
 <div class="section">
   <cdk-virtual-scroll-viewport itemSize="40"  class="scroll-area" >
-    <ng-container *cdkVirtualFor="let user of userList; let index = index; template: scrollItemTemplate; " class="scroll-item"></ng-container>
+    <ng-container *cdkVirtualFor="let user of userList; let index = index; template: scrollItemTemplate; "></ng-container>
   </cdk-virtual-scroll-viewport>
 </div>
 <ng-template #scrollItemTemplate let-user>
-  {{user.name}}
+  <div class="scroll-item">{{user.name}}</div>
 </ng-template>
 
 <h2>Drag and Drop</h2>
