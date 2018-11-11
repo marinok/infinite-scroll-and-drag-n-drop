@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScrollingModule
+    ScrollingModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

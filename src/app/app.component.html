@@ -1,8 +1,20 @@
-<div>
-    <cdk-virtual-scroll-viewport itemSize="30"  class="scroll-area">
-        <li *cdkVirtualFor="let user of userList" class="animated lightSpeedIn item-wrap">
-            {{user.name}}
-        </li>
+<h2>Infinite scroll</h2>
+<div class="section">
+    <cdk-virtual-scroll-viewport itemSize="40"  class="scroll-area" >
+        <div *cdkVirtualFor="let user of userList; let index = index; template: scrollItem;" class="scroll-item">
+            <span>{{user.name}}, {{index}}</span>
+        </div>
     </cdk-virtual-scroll-viewport>
 </div>
-<router-outlet></router-outlet>
+
+<h2>Drag and Drop</h2>
+<div class="section">
+  <div class="drag-area" cdkDropList (cdkDropListDropped)="dropDropList($event)">
+      <div *ngFor="let user of userList2; let index = index;" cdkDrag [cdkDragData]="user" class="drag-item">{{user.name}}
+        <div>
+          <div>index: {{index}}</div>
+          <div *ngIf="user.previousIndex>=0">previousIndex: {{user.previousIndex}}</div>
+        </div>
+      </div>
+  </div>
+</div>
