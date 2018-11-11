@@ -1,7 +1,7 @@
 <h2>Infinite scroll</h2>
 <div class="section">
     <cdk-virtual-scroll-viewport itemSize="40"  class="scroll-area" >
-        <div *cdkVirtualFor="let user of userList; let index = index; template: scrollItem;" class="scroll-item">
+        <div *cdkVirtualFor="let user of userList; let index = index;" class="scroll-item">
             <span>{{user.name}}, {{index}}</span>
         </div>
     </cdk-virtual-scroll-viewport>
